@@ -11,6 +11,7 @@ pipeline {
                     sh 'git add .'
                     sh 'git commit -m "Copy files to GitHub"'
                     sh 'git push origin main'
+                }
             }
         }
     }
