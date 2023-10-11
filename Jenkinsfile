@@ -3,8 +3,11 @@ pipeline {
     stages {
         stage('Copy Files to GitHub') {
             steps {
-                sh 'cp /var/lib/jenkins/installapache.sh jenkins/'
-                sh 'cp /var/lib/jenkins/checklogs.sh jenkins/'
+                    def currentDir = pwd() // Збережемо поточну директорію (де знаходиться Jenkinsfile)
+                    def workspaceDir = env.WORKSPACE // Отримаємо робочу директорію пайплайну
+                    // Копіюємо файли з поточної директорії в робочу директорію
+                    sh "cp ${currentDir}/installapache.sh ${workspaceDir}/"
+                    sh "cp ${currentDir}/checklogs.sh ${workspaceDir}/"
                 dir('jenkins') {
                     sh 'git add .'
                     sh 'git commit -m "Add installapache.sh"'
