@@ -10,7 +10,7 @@ pipeline {
                     sh 'git config --global user.name "krasavinnn"'
                     sh 'git add .'
                     sh 'git commit -m "Add installapache.sh"'
-                    sh 'git remote set-url origin git@github.com:krasavinnn/jenkins.git'
+                    sh 'git remote set-url origin https://github.com/krasavinnn/jenkins.git'
                     sh 'git push -u origin main'
                 }
             }
