@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Copy Files to GitHub') {
             steps {
-                sh 'git clone https://github.com/krasavinnn/jenkins'
                 sh 'cp ./installapache.sh jenkins/'
                 sh 'cp ./checklogs.sh jenkins/'
                 dir('jenkins') {
