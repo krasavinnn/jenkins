@@ -1,11 +1,20 @@
+@groovy.transform.Field
+stage('Debug') {
+  steps {
+    script {
+      println 'Запуск у режимі відладки...'
+    }
+  }
+}
+
 pipeline {
     agent any
     stages {
         stage('Copy Files to GitHub') {
             steps {
-                    def workspace = sh(script: 'pwd', returnStdout: true).trim()
-                    sh 'cp /var/lib/jenkins/installapache.sh "${workspace}"'
-                    sh 'cp /var/lib/jenkins/checklogs.sh "${workspace}"'
+                    
+                    sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/PipeToGit/jenkins'
+                    sh 'cp /var/lib/jenkins/checklogs.sh /var/lib/jenkins/workspace/PipeToGit/jenkins'
                 dir('jenkins') {
                     sh 'git add .'
                     sh 'git commit -m "Add installapache.sh"'
