@@ -1,12 +1,3 @@
-@groovy.transform.Field
-stage('Debug') {
-  steps {
-    script {
-      println 'Запуск у режимі відладки...'
-    }
-  }
-}
-
 pipeline {
     agent any
     stages {
