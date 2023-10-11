@@ -6,8 +6,6 @@ pipeline {
                 sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/jengit2/'
                 sh 'cp /var/lib/jenkins/checklogs.sh /var/lib/jenkins/workspace/jengit2/'
                 dir('jenkins') {
-                    sh 'git config --global user.email "krasavin5718@gmail.com"'
-                    sh 'git config --global user.name "krasavinnn"'
                     sh 'git add .'
                     sh 'git commit -m "Add installapache.sh"'
                     sh 'git remote set-url origin https://github.com/krasavinnn/jenkins.git'
