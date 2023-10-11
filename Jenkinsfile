@@ -10,7 +10,7 @@ pipeline {
                     sh 'git config user.email "krasavin5718@gmail.com"'
                     sh 'git config user.name "krasavinnn"'
                     sh 'git add .'
-                    sh 'git commit -m --allow-empty "Your commit message" --author "krasavinnn <krasavin5718@gmail.com>"'
+                    sh 'git commit --allow-empty -m "Your commit message" --author "krasavinnn <krasavin5718@gmail.com>"'
                     sh 'git push origin main'
                 }
             }
