@@ -11,6 +11,7 @@ pipeline {
                     sh 'git config --global user.name "krasavinnn"'
                     sh 'git add .'
                     sh 'git commit --allow-empty -m "Add files"'
+                    sh 'git remote set-url origin git@github.com:krasavinnn/jenkins.git'
                     sh 'git push -u origin main'
                 }
             }
