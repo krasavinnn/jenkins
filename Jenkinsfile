@@ -7,6 +7,7 @@ pipeline {
                     sh 'git checkout main'
                     sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/pipe-to-git/jenkins/'
                 dir('jenkins') {
+                    sh 'git config --global user.name "krasavinnn"'
                     sh 'git add .'                    
                     sh 'git commit --allow-empty -am "Add installapache.sh"'
                     sh 'git push https://github.com/krasavinnn/jenkins.git'
