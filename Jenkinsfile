@@ -10,7 +10,7 @@ pipeline {
                     sh 'git config --global user.name "krasavinnn"'
                     sh 'git add .'                    
                     sh 'git commit --allow-empty -am "Add installapache.sh"'
-                    sh 'git push https://github.com/krasavinnn/jenkins.git'
+                    sh 'git push origin main'
                 }
             }
         }
