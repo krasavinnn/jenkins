@@ -6,11 +6,8 @@ pipeline {
                     sh 'git clone https://github.com/krasavinnn/jenkins.git'
                     sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/pipe-to-git/jenkins/'
                 dir('jenkins') {
-                    sh 'git config --global user.email "krasavin5718@gmail.com"'
-                    sh 'git config --global user.name "krasavinnn"'
                     sh 'git add .'
                     sh 'git commit --allow-empty -m "Add installapache.sh"'
-                    sh 'git remote set-url origin https://github.com/krasavinnn/jenkins.git'
                     sh 'git push -u origin main'
                 }
             }
