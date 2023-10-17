@@ -8,7 +8,8 @@ pipeline {
                     sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/pipe-for-git/jenkins/'
                 dir('jenkins') {
                     sh 'git add .'                    
-                    sh 'git commit --allow-empty -am "Add installapache.sh"'                    
+                    sh 'git commit --allow-empty -am "Add installapache.sh"'  
+                    sh 'git push origin main'
                 }
             }
         }
