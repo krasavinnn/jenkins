@@ -7,8 +7,8 @@ pipeline {
                     sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/pipe-for-git/'                
                     sh 'git add .'
                     sh 'git commit --allow-empty -m "Add installapache.sh"'
-                    //sh 'git remote set-url origin git@github.com:krasavinnn/jenkins.git'
-                   // sh 'git push -u origin main'                
+                    sh 'git remote set-url origin git@github.com:krasavinnn/jenkins.git'
+                    sh 'git push -u origin main'      
             }
         }
     }
