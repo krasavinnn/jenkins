@@ -9,7 +9,6 @@ pipeline {
                 dir('jenkins') {
                     sh 'git add .'                    
                     sh 'git commit --allow-empty -am "Add installapache.sh"'  
-                    sh 'git push origin main'
                 }
             }
         }
