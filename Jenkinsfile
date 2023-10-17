@@ -4,7 +4,7 @@ pipeline {
         stage('Copy Files to GitHub') {
             steps {
                     sh 'git clone git@github.com:krasavinnn/jenkins.git'
-                    sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/PipeToGit/jenkins'
+                    sh 'cp /var/lib/jenkins/installapache.sh /var/lib/jenkins/workspace/pipe-for-git/jenkins'
                 dir('jenkins') {
                     sh 'git add .'
                     sh 'git commit --allow-empty -m "Add installapache.sh"'
